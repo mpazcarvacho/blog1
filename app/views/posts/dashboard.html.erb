@@ -1,7 +1,7 @@
-<h1>Posts#dashboard</h1>
-<p>Find me in app/views/posts/dashboard.html.erb</p>
+<h1>Create post</h1>
 
-<form id="create_posts">
+<form id="create_posts" method="get" action="/posts/create">
+
   <div class="form-group">
     <label for="title">Title</label>
     <input name="title" class="form-control">
@@ -13,6 +13,8 @@
   <div class="form-group">
     <label for="content">Content</label>
     <textarea name="content" class="form-control"></textarea>
+    <small id="contentHelp" class="form-text text-muted">The word "ugly" will be censored.</small>
   </div>
-  <button type="button" class="btn-success">Submit</button>
+
+  <button type="submit" class="btn-success">Submit</button>
 </form>

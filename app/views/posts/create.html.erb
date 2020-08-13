@@ -1,0 +1,17 @@
+
+<% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@post.errors.count, "error")%>
+      prohibited the post for being created:
+    </h2>
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% else %>
+  <h2>Your post was created succesfully!</h2>
+<% end %>
+
